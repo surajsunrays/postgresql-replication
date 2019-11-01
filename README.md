@@ -22,11 +22,11 @@ After this, you need to modify the image name in docker-compose.yml file.
 <b>2. Use PgAdmin to log into the databases</b><br><br>
 We need to add two servers into the PgAdmin one is for master server and another is for slave server.<br><br>
 <b>2.1 Adding master server</b></br><br>
-![alt text](master1.png)<br>
-![alt text](master2.png)<br><br>
+![alt text](screenshots/master1.png)<br>
+![alt text](screenshots/master2.png)<br><br>
 <b>2.2 Adding slave server</b></br><br>
-![alt text](slave1.png)<br>
-![alt text](slave2.png)<br><br>
+![alt text](screenshots/slave1.png)<br>
+![alt text](screenshots/slave2.png)<br><br>
 
 <b>3. Create any table in <b>master server<b/> and check the same in the slave server</b><br><br>
   
@@ -39,5 +39,5 @@ INSERT INTO public.test_replication values (102);
 <b>4. Check the same table in the slave server</b><br><br>
 ```SELECT * FROM test_replication;```
 
-![alt text](slave3.png)<br><br>
+![alt text](screenshots/slave3.png)<br><br>
 
