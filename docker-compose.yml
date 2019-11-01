@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  # This will be used as a postgresql master database
+  postgres-master:
+    image: sunrays86/postgresql-replication
+    environment:
+      POSTGRES_USER: postgres     # define credentials
+      POSTGRES_PASSWORD: postgres # define credentials
+      POSTGRES_DB: postgres       # define database
+    ports:
+      - 5433:5432                 # Postgres port	  
+    
+  # This will used as a postgresql slave database.
+  postgres-slave:
+    image: sunrays86/postgresql-replication
+    environment:
+      POSTGRES_USER: postgres     # define credentials
+      POSTGRES_PASSWORD: postgres # define credentials
+      POSTGRES_DB: postgres       # define database
+      POSTGRES_MASTER_SERVICE_HOST: postgres-master
+      REPLICATION_ROLE: slave
+    ports:
+      - 5434:5432                 # Postgres port
+    links:
+      - postgres-master
