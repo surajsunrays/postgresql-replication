@@ -39,3 +39,5 @@ INSERT INTO public.test_replication values (102);
 <b>4. Check the same table in the slave server</b><br><br>
 ```SELECT * FROM test_replication;```
 
+![alt text](slave3.png)<br><br>
+
