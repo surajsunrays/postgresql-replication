@@ -27,6 +27,7 @@ We need to add two servers into the PgAdmin one is for master server and another
 <b>2.2 Adding slave server</b></br><br>
 ![alt text](screenshots/slave1.png)<br>
 ![alt text](screenshots/slave2.png)<br><br>
+*** Please ignore the comment for the server in this section.
 
 <b>3. Create any table in <b>master server<b/> and check the same in the slave server</b><br><br>
   
